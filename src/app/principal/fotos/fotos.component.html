@@ -1,8 +1,15 @@
-<h2>Fotos con títulos que empiezan con a, r o s</h2>
-<div class="contenedor">
-  <div class="foto" *ngFor="let foto of fotos">
-    <img [src]="foto.thumbnailUrl" alt="Foto">
-    <p>{{ foto.title }}</p>
-  </div>
+<h2>Fotos con títulos que empiezan con "A - R - S"</h2>
+<div class="contenedor center">
+  <mat-card *ngFor="let foto of fotos" class="foto">
+    <mat-card-content>
+      <span>- IMAGEN Nro {{foto.id}} :</span>
+      <br>
+      <img [src]="foto.thumbnailUrl" alt="Foto">
+      <br>
+      <span>- Titulo:</span>
+      <p>{{ foto.title }}</p>
+      <hr>
+    </mat-card-content>
+  </mat-card>
 </div>
 
