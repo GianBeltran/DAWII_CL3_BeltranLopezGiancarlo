@@ -1,0 +1,42 @@
+<h2>Lista de Episodios con ID impar</h2>
+<div class="contenedor">
+<table mat-table [dataSource]="episodios" class="mat-elevation-z8">
+
+    <!--- ['id', 'name', 'air_date', 'episode', 'url', 'created']-->
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="air_date">
+        <th mat-header-cell *matHeaderCellDef> type </th>
+        <td mat-cell *matCellDef="let element"> {{element.air_date}} </td>
+      </ng-container>
+  
+    <ng-container matColumnDef="episode">
+      <th mat-header-cell *matHeaderCellDef> dimension </th>
+      <td mat-cell *matCellDef="let element"> {{element.episode}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="url">
+        <th mat-header-cell *matHeaderCellDef> url </th>
+        <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+      </ng-container>
+      <ng-container matColumnDef="created">
+        <th mat-header-cell *matHeaderCellDef> created </th>
+        <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+  </table>
+</div>
+
+
+
+  
