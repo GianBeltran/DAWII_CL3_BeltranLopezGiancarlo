@@ -1,1 +1,8 @@
-<p>fotos works!</p>
+<h2>Fotos con títulos que empiezan con a, r o s</h2>
+<div class="contenedor">
+  <div class="foto" *ngFor="let foto of fotos">
+    <img [src]="foto.thumbnailUrl" alt="Foto">
+    <p>{{ foto.title }}</p>
+  </div>
+</div>
+
